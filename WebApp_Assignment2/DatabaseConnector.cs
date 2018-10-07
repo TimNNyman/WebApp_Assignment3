@@ -25,6 +25,12 @@ namespace WebApp_Assignment2
             }
         }
 
+        public List<String> get5Searches(string search)
+        {
+
+            return new List<string>() { search,"Hello world","These are static","Testing","A B C D E F G H I"};
+        }
+
         public List<newsData> readNewsData(string path)
         {
             List<newsData> news = new List<newsData>();

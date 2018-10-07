@@ -1,0 +1,18 @@
+
+#searchReqDiv {
+    border: 2px solid white;
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+}
+
+.seachLink {
+    padding: 2px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.seachLink:hover {
+    background-color: #222;
+}
