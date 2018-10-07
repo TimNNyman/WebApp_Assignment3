@@ -1,0 +1,18 @@
+footer {    
+    z-index: 2;
+}
+
+#footer-info{
+    color: white;
+    float: left;
+}
+
+#footer-logo{
+    color: white;
+    float: left;
+}
+
+#footer-links {
+    float: right;
+    font-size: 14px;
+}

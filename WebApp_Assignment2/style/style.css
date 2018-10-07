@@ -1,0 +1,236 @@
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background: #000000;
+    margin: 0px;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 135px;
+    width: 100%;
+    background: #000 url(https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/starfield-banner.jpg);
+    margin: auto;
+    padding: 10px;
+    z-index: 1;
+}
+
+#navDiv {
+    height: 120px;
+    width: 100%;
+}
+
+main {
+    height: fit-content;
+    margin: auto;
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.scrollingImgDiv {
+    height: 200px;
+    width: 100%;
+}
+
+#scrollingImg {
+    height: 100%;
+    width: 100%;
+}
+
+#scrollingImg.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.Logo {
+    position: absolute;
+    height: 100%;
+}
+
+.Logo img {
+    height: 85%;
+}
+
+.searchButton {
+    background: url(https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/search.svg) center center no-repeat;
+}
+
+.Share a {
+    background-image: url(https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/share.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 22px;
+    float: left;
+}
+
+form {
+    float: left;
+    height: 68px;
+    width: 197px;
+}
+
+.TopNav1 {
+    width: fit-content;
+    margin: auto;
+    padding: 12px;
+}
+
+.TopNav1 li+li {
+    border-left: 1px solid #ffffff
+}
+
+.TopNav1 li:hover, #footer-links li:hover {
+    text-decoration: underline;
+}
+
+.TopNav2 li:hover {
+    background-color: #555555;
+}
+
+.Search {
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    margin: 20px;
+    float: right;
+}
+
+.TopNav2 {
+    background-color: #333333;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    margin-top: 1px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.updateVideo{
+    float:left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.mainArticle {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    justify-content: center;
+    grid-gap: 30px;
+}
+
+.mainArticle > div {
+    background-color: #f1f1f1;
+    height: auto;
+    width: auto;
+    margin: auto;
+    font-size: 14px;
+    word-break:break-word;
+    padding: 5px;
+    position: relative;
+}
+
+.image > div {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin:auto;
+}
+
+
+.title {
+    text-align:center;
+}
+
+#articles {
+    width: 1000px;
+    display: flex;
+    height: auto;
+    margin: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    grid-gap: 30px;
+}
+
+
+#articles a {
+    text-decoration: none;
+    height: inherit;
+}
+
+.scrollingImgDiv {
+    grid-column: span 3;
+}
+
+.updatableNews {
+    grid-column: span 2;
+}
+
+#articles > div {
+    background-color: #f1f1f1;
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+}
+
+video {
+    height: inherit;
+    width: auto;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.updatableNews img {
+    height: 100%;
+    width: 300px;
+    float: left;
+}
+
+.updatableNews .textContent {
+    padding-left: 20px;
+    color: black;
+    word-wrap: break-word;
+    height: inherit;
+    overflow:hidden;
+}
+
+.updatableNews .title {
+    font-size: 24px;
+}
+
+.updatableNews .text {
+    font-size: 16px;
+    word-wrap: break-word;
+}
