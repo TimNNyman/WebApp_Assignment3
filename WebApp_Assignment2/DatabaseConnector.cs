@@ -58,12 +58,24 @@ namespace WebApp_Assignment2
             return news;
         }
 
-        public void saveNewsData(string path, List<newsData> data)
+        public void saveNewsData(string path, newsData data, string user)
         {
-            using (StreamWriter file = File.CreateText(path))
+            string CS = "Server=.\\MY_TEST_INSTANCE; Database = WebApp; Trusted_Connection = True";
+            string cmdString = "UPDATE UpdatableNews Set [User]=@user, Title=@title, Text=@text, Image=@image";
+
+            using (SqlConnection con = new SqlConnection(CS))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, data);
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandText = cmdString;
+                    cmd.Parameters.AddWithValue("@user", user);
+                    cmd.Parameters.AddWithValue("@title", data.Title);
+                    cmd.Parameters.AddWithValue("@text", data.Text);
+                    cmd.Parameters.AddWithValue("@image", data.Image);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
