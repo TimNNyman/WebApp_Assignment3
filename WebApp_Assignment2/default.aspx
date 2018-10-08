@@ -22,7 +22,7 @@
         <div class="Search">
             <form id="Search">
                 <div>
-                    <input id="mySearch" name="Search" placeholder="Search the site..." onkeyup="getSearchQry()" onpaste="getSearchQry()" size="30px" style="border-right:0px; margin-right:0px">
+                    <input id="mySearch" name="Search" placeholder="Search the site..." onkeyup="getSearchQry()" onpaste="getSearchQry()" size="30px" style="border-right:0px; margin-right:0px" autocomplete="off">
                     <div id="searchReqDiv"></div>
                     <input class="searchButton" type="submit" value="Search">
                 </div>
