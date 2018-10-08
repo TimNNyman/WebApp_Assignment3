@@ -1,6 +1,7 @@
 ﻿﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,8 @@ namespace WebApp_Assignment2
 {
     public class DatabaseConnector
     {
+
+        private const string CS = "Server=.\\MY_TEST_INSTANCE; Database = WebApp; Trusted_Connection = True";
         private static DatabaseConnector instance;
 
         private DatabaseConnector() { }
@@ -27,8 +30,21 @@ namespace WebApp_Assignment2
 
         public List<String> get5Searches(string search)
         {
+            List<string> retList = new List<string>();
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                con.Open();
 
-            return new List<string>() { search,"Hello world","These are static","Testing","A B C D E F G H I"};
+                string query = "SELECT TOP 5 Title from Articles WHERE Title LIKE \'" + search + "%\' UNION SELECT Title FROM UpdatableNews WHERE Title LIKE \'" + search + "%\'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    retList.Add(reader.GetString(0).Trim());
+                }
+                reader.Close();
+            }
+            return retList;
         }
 
         public List<newsData> readNewsData(string path)
