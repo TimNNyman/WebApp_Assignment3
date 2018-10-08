@@ -48,10 +48,8 @@
                 <li>
                     <a href="#">WWRA Associates</a>
                 </li>
-                <li>
-                    <div id="loginDiv">
-                        <a href="login.aspx" id="login">Login</a>
-                    </div>
+                <li>      
+                    <asp:LinkButton id="login" Text="Login" OnClick="login_Click" runat="server"/> 
                 </li>
             </ul>
         </div>
