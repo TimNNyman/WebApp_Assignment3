@@ -71,7 +71,11 @@ namespace WebApp_Assignment2
                 }
             }
 
- 
+            if(target.Title == null)
+            {
+                Response.Redirect("default.aspx");
+            }
+
             HtmlGenericControl myDiv = new HtmlGenericControl("div");
             myDiv.ID = "myDiv";
 

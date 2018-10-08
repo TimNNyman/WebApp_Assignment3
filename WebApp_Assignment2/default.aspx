@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css?10"/>
     <link rel="stylesheet" type="text/css" href="style/HovrableArticle.css?"/>
     <link rel="stylesheet" type="text/css" href="style/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="style/searchList.css"/>
     <script type="text/javascript" charset="utf-8" src="script/index.js"></script>
 </head>
 <body>
@@ -21,7 +22,8 @@
         <div class="Search">
             <form id="Search">
                 <div>
-                    <input type="search" id="mySearch" name="Search" placeholder="Search the site..." size="30px" style="border-right:0px" style="margin-right:0px">
+                    <input id="mySearch" name="Search" placeholder="Search the site..." onkeyup="getSearchQry()" onpaste="getSearchQry()" size="30px" style="border-right:0px; margin-right:0px">
+                    <div id="searchReqDiv"></div>
                     <input class="searchButton" type="submit" value="Search">
                 </div>
             </form>
@@ -30,7 +32,6 @@
                 <a href="#"></a>
             </div>
         </div>
-
         <div class="TopNav1">
             <ul>
                 <li>
@@ -131,5 +132,6 @@
         </ul>
     </footer>
     </form>
+    <script type="text/javascript" charset="utf-8" src="script/searchList.js"></script>
 </body>
 </html>
